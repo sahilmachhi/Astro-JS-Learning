@@ -1,7 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro";
+const isRed = true;
+const isFontBig = false;
 ---
 
 <Layout title="hello from astro">
-  <h1 style="color: white;">hello from react js</h1>
+  <h1 class:list={[{ big: isFontBig }, { red: isRed }]}>hello from react js</h1>
 </Layout>
+
+<style>
+  .red {
+    color: red;
+  }
+
+  .big {
+    font-size: 5rem;
+  }
+</style>
