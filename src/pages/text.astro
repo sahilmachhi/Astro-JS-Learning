@@ -1,9 +1,12 @@
 ---
 import Image from "astro/components/Image.astro";
 import sky from "../images/84248.png";
+import MainHeader from "../layouts/mainHeader.astro";
 ---
 
-<h1>test route text</h1>
-<a href="/">home</a>
-<Image src={sky} alt="logo" height={60} width={120} />
-<Image src="/84248.png" alt="logo2" height={60} width={120} />
+<MainHeader title="image route page">
+  <h1>test route text</h1>
+  <a href="/" class="text-red-500">home</a>
+  <Image src={sky} alt="logo" height={60} width={120} />
+  <Image src="/84248.png" alt="logo2" height={60} width={120} />
+</MainHeader>
