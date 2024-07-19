@@ -1,8 +1,32 @@
 ---
 import MainHeader from "../layouts/mainHeader.astro";
+import Box from "../components/Box.astro";
+const array = [
+  1, 1, 1, 1, 1, 2, 3, 3, 3, 3, 4, 3, 54, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6,
+];
+console.log(array);
+const newArray = [...new Set(array)];
+console.log(newArray);
+const searchID = (e) => {
+  console.log(e.target.value);
+};
 ---
 
 <MainHeader title="homepage">
   <h1>Astro</h1>
   <a href="/text">text route</a>
+  <div class="flex flex-col items-center justify-center gap-4">
+    <Box title="hello" paragraph="lorem sdas  as  a s as  as d ad asd as d" />
+    <Box title="fdsfds" paragraph=" sdas  as  a s asashfsajhk  asd as d" />
+  </div>
+  <div>
+    <input type="text" id="search" onchange="searchID()" />
+    <button>search</button>
+  </div>
 </MainHeader>
+
+<script>
+  const searchID = (e) => {
+    console.log(e.target.value);
+  };
+</script>
